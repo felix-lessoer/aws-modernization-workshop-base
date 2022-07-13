@@ -93,11 +93,3 @@ In order to prevent that Elastic also offers to support you with observing the c
 To observe and prevent vulnerabilities you can use the Elastic Endpoint Integration that is part of the Elastic agent and use this to prevent any kind of malware or ransomware attacks to your used EC2 instances. Like with all other integrations the activation only needs a few clicks and is done after a few minutes.
 
 To also observe compliance and configuration issues Elastic also provides Cloud Posture management in order to execute automatic audits and benchmarks against your environment.
-
-
-
-{{% notice warning %}}
-<p style='text-align: left;'>
-The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
-</p>
-{{% /notice %}}

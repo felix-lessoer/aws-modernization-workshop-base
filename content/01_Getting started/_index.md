@@ -93,9 +93,3 @@ Working with AWS integrations is a great way to collect the monitoring data that
 
 ## [Optional] Security / Authentication
 tbd
-
-{{% notice warning %}}
-<p style='text-align: left;'>
-The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
-</p>
-{{% /notice %}}

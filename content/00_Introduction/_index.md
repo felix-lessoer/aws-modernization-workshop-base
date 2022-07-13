@@ -44,10 +44,3 @@ The workshop consists of three major parts:
 3. Observing vulnerabilities and compliance
 
 Each part can be done separately. However, if you want to learn how best to use Elastic (in order to consolidate your tool landscape, save costs, etc.), we recommend you complete the full workshop.
-
-
-{{% notice warning %}}
-<p style='text-align: left;'>
-The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
-</p>
-{{% /notice %}}
