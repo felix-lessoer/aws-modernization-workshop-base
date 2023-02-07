@@ -1,6 +1,6 @@
 ---
 title: "Analyze performance issues"
-weight: 33
+weight: 50
 ---
 ## Task 2
 

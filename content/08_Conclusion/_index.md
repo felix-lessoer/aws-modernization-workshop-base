@@ -1,7 +1,7 @@
 ---
 title: "Conclusion"
 chapter: false
-weight: 60
+weight: 90
 pre: "<b>3. </b>"
 ---
 

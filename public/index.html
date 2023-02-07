@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.101.0" />
-    <meta name="description" content="Elastic on AWS Workshop description">
+    <meta name="description" content="Elastic Observability on AWS Workshop">
 <meta name="author" content="Felix Roessel">
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Elastic on AWS Workshop :: Elastic on AWS Workshop</title>
+    <title>Elastic on AWS Workshop :: Elastic Observability on AWS Workshop</title>
 
     
-    <link href="/css/nucleus.css?1657715404" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1657715404" rel="stylesheet">
-    <link href="/css/hybrid.css?1657715404" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1657715404" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1657715404" rel="stylesheet">
-    <link href="/css/auto-complete.css?1657715404" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1657715404" rel="stylesheet">
-    <link href="/css/theme.css?1657715404" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1657715404" rel="stylesheet">
+    <link href="/css/nucleus.css?1675792333" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675792333" rel="stylesheet">
+    <link href="/css/hybrid.css?1675792333" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675792333" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675792333" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675792333" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675792333" rel="stylesheet">
+    <link href="/css/theme.css?1675792333" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675792333" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1657715404" rel="stylesheet">
+    <link href="/css/theme-mine.css?1675792333" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1657715404"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675792333"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a href="/" title="Go home"><img style="vertical-align:middle;margin:30px;" src="../../images/AWS-Logo_White-Color.png" height="125px">
+      <a href="https://elastic.co" title="Go home" target="_blank"><img src="/images/logo-elastic-horizontal-color-reverse.svg" height="125px">
 
     </div>
     
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1657715404"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1657715404"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675792333"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675792333"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1657715404"></script>
+<script type="text/javascript" src="/js/search.js?1675792333"></script>
 
     
   </div>
@@ -93,12 +93,43 @@
         
         ">
       <a href="/00_introduction.html">
-          <b>0. </b>Introduction
+          Introduction
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/00_introduction/page-1-elastic.html" title="What is Elastic?" class="dd-item ">
+        <a href="/00_introduction/page-1-elastic.html">
+        What is Elastic?
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
       
     </li>
   
@@ -126,6 +157,79 @@
       </a>
       
       
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01_getting-started/page-1-aws-marketplace.html" title="Enable Elastic in AWS Marketplace" class="dd-item ">
+        <a href="/01_getting-started/page-1-aws-marketplace.html">
+        Enable Elastic in AWS Marketplace
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01_getting-started/page-1-elastic-key.html" title="Get credentials from Elastic" class="dd-item ">
+        <a href="/01_getting-started/page-1-elastic-key.html">
+        Get credentials from Elastic
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01_getting-started/page-1-cloud-formation.html" title="Run the Cloud Formation script" class="dd-item ">
+        <a href="/01_getting-started/page-1-cloud-formation.html">
+        Run the Cloud Formation script
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
     </li>
   
  
@@ -139,13 +243,70 @@
  
   
     
-    <li data-nav-id="/02_observability.html" title="Observability" class="dd-item
+    <li data-nav-id="/02_demo.html" title="Root Cause Analysis" class="dd-item
         
         
         
         ">
-      <a href="/02_observability.html">
-          <b>2. </b>Observability
+      <a href="/02_demo.html">
+          <b>2. </b>Root Cause Analysis
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02_demo/page-1-environment.html" title="The environment" class="dd-item ">
+        <a href="/02_demo/page-1-environment.html">
+        The environment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/03_task1.html" title="Find issues in applications running on AWS" class="dd-item
+        
+        
+        
+        ">
+      <a href="/03_task1.html">
+          Find issues in applications running on AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -165,12 +326,210 @@
  
   
     
-    <li data-nav-id="/03_conclusion.html" title="Conclusion" class="dd-item
+    <li data-nav-id="/99_observability.html" title="Observability" class="dd-item
         
         
         
         ">
-      <a href="/03_conclusion.html">
+      <a href="/99_observability.html">
+          <b>99. </b>Observability
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/99_observability/page-1-platform.html" title="Observe the AWS platform" class="dd-item ">
+        <a href="/99_observability/page-1-platform.html">
+        Observe the AWS platform
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/99_observability/page-1-example-app.html" title="Observe apps running in AWS" class="dd-item ">
+        <a href="/99_observability/page-1-example-app.html">
+        Observe apps running in AWS
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/99_observability/page-1-k8s.html" title="Observe apps running in Kubernetes (EKS)" class="dd-item ">
+        <a href="/99_observability/page-1-k8s.html">
+        Observe apps running in Kubernetes (EKS)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/99_observability/page-1-conpliance.html" title="Observe vulnerabilities and compliance" class="dd-item ">
+        <a href="/99_observability/page-1-conpliance.html">
+        Observe vulnerabilities and compliance
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/04_task2.html" title="Analyze performance issues" class="dd-item
+        
+        
+        
+        ">
+      <a href="/04_task2.html">
+          Analyze performance issues
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/05_task3.html" title="AIOps Log Spike analysis" class="dd-item
+        
+        
+        
+        ">
+      <a href="/05_task3.html">
+          AIOps Log Spike analysis
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/06_task4.html" title="Anomaly Detection" class="dd-item
+        
+        
+        
+        ">
+      <a href="/06_task4.html">
+          Anomaly Detection
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/08_conclusion.html" title="Conclusion" class="dd-item
+        
+        
+        
+        ">
+      <a href="/08_conclusion.html">
           <b>3. </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
@@ -197,23 +556,19 @@
               </li>
           
               <li>
-                  <a class="padding" href="https://aws.amazon.com/builders-library/"><i class='fas fa-tools'></i> AWS Builders Library</a>
-              </li>
-          
-              <li>
                   <a class="padding" href="https://aws.amazon.com/blogs/modernizing-with-aws/"><i class='far fa-lightbulb'></i> Modernization with AWS</a>
               </li>
           
               <li>
-                  <a class="padding" href="https://eksworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> EKS Workshop</a>
+                  <a class="padding" href="https://ela.st/"><i class='fas fa-chalkboard-teacher'></i> Elasticsearch on AWS Marketplace</a>
               </li>
           
               <li>
-                  <a class="padding" href="https://ecsworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> ECS Workshop</a>
+                  <a class="padding" href="https://cloud.elastic.co"><i class='fas fa-chalkboard-teacher'></i> Elastic Cloud</a>
               </li>
           
               <li>
-                  <a class="padding" href="https://www.appmeshworkshop.com/"><i class='fas fa-chalkboard-teacher'></i> App Mesh Workshop</a>
+                  <a class="padding" href="https://www.elastic.co/amazon-opensearch-service"><i class='fas fa-chalkboard-teacher'></i> Elasticsearch or OpenSearch?</a>
               </li>
           
         </ul>
@@ -267,32 +622,8 @@
 </span>
 
  
-<h1 id="elastic-observability-on-aws">Elastic Observability on AWS</h1>
-<p>Overcome data silos to transform your data into actionable insights</p>
-<h2 id="welcome">Welcome</h2>
-<p>In this workshop you will learn how to use Elastic in your AWS environment.</p>
-<h2 id="workshop-agenda">Workshop Agenda</h2>
-<ul>
-<li>Deploy Elastic in AWS Marketplace</li>
-<li>Activate AWS data collection integrations</li>
-<li>Activate pre defined rules</li>
-<li>Build custom rules</li>
-<li>Build your first custom dashboard</li>
-</ul>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Learn how to deploy Elastic in AWS</li>
-<li>Learn how to get any data from your AWS environments into Elastic</li>
-<li>Best practices for using the AWS data in regards to Observability, Security and Search</li>
-</ul>
-<h2 id="who-should-attend">Who should attend</h2>
-<p>This workshop is targeted towards roles in the following areas:</p>
-<p><em>Application Development:</em> Develop software, apps and services, and are responsible for creating observable code, and helping debug and fix code-level issues in dev &amp; prod.</p>
-<p><em>DevOps / SRE / Operations / Application Support:</em> Responsible for maintaining service availability, performance, and reliability SLAs, and resolving issues when they occur</p>
-<h2 id="background-knowledge-for-the-workshop">Background knowledge for the Workshop</h2>
-<p>We start from scratch. So no prior knowledge needed to complete the workshop. However having some kind of Elastic knowledge helps to get it done more efficiently and learn some tips and tricks at the same time.</p>
-<h2 id="expected-time">Expected time</h2>
-<p>We’ve planned this workshop to be finished within 1-2 hours. You can pause at any time and continue working. However, the trial period for your Elastic Cluster within the AWS Marketplace is 7 days. After that period, your trial will automatically transform into a paid subscription if you do not delete the environment.</p>
+<h1 id="running-more-reliable-apps-in-aws-leveraging-the-elastic-serverless-forwarder-via-aws-sar">Running more reliable apps in AWS leveraging the Elastic serverless forwarder via AWS SAR</h1>
+<p>Elastic helps you to overcome data silos and transform data into actionable insights. By using the approach described in the workshop you will be able to run more reliable apps and detect issues as early as possible. By leveraging the Elastic serverless forwarder you save time for the setup and resources.</p>
 	
   
         
@@ -330,6 +661,230 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -410,19 +965,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1657715404"></script>
-    <script src="/js/perfect-scrollbar.min.js?1657715404"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1657715404"></script>
-    <script src="/js/jquery.sticky.js?1657715404"></script>
-    <script src="/js/featherlight.min.js?1657715404"></script>
-    <script src="/js/highlight.pack.js?1657715404"></script>
+    <script src="/js/clipboard.min.js?1675792333"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675792333"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675792333"></script>
+    <script src="/js/jquery.sticky.js?1675792333"></script>
+    <script src="/js/featherlight.min.js?1675792333"></script>
+    <script src="/js/highlight.pack.js?1675792333"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1657715404"></script>
-    <script src="/js/learn.js?1657715404"></script>
-    <script src="/js/hugo-learn.js?1657715404"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675792333"></script>
+    <script src="/js/learn.js?1675792333"></script>
+    <script src="/js/hugo-learn.js?1675792333"></script>
     
         
-            <script src="/mermaid/mermaid.js?1657715404"></script>
+            <script src="/mermaid/mermaid.js?1675792333"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

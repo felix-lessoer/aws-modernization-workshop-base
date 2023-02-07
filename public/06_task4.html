@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Introduction :: Elastic Observability on AWS Workshop</title>
+    <title>Anomaly Detection :: Elastic Observability on AWS Workshop</title>
 
     
     <link href="/css/nucleus.css?1675792333" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/00_introduction.html">
+  <body class="" data-url="/06_task4.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/00_introduction.html" title="Introduction" class="dd-item
         
-        active
+        
         
         ">
       <a href="/00_introduction.html">
@@ -500,7 +500,7 @@
     
     <li data-nav-id="/06_task4.html" title="Anomaly Detection" class="dd-item
         
-        
+        active
         
         ">
       <a href="/06_task4.html">
@@ -629,7 +629,7 @@
             
           
           
-            <a href='/'>Elastic on AWS Workshop</a> > Introduction
+            <a href='/'>Elastic on AWS Workshop</a> > Anomaly Detection
           
         
           
@@ -642,11 +642,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#workshop-agenda">Workshop Agenda</a></li>
-    <li><a href="#learning-objectives">Learning Objectives</a></li>
-    <li><a href="#who-should-attend">Who should attend</a></li>
-    <li><a href="#background-knowledge-for-the-workshop">Background knowledge for the Workshop</a></li>
-    <li><a href="#expected-time">Expected time</a></li>
+    <li><a href="#task-4">Task 4</a></li>
   </ul>
 </nav>
     </div>
@@ -664,7 +660,7 @@
           
             <h1>
               
-              Introduction
+              Anomaly Detection
             </h1>
           
 
@@ -672,28 +668,24 @@
 
 
 
-	<p>In this workshop you will learn how to use Elastic in your AWS environment. We will create the full environment for you including an example application. Your task will be to identify issues within this application by using Elastic, solving these issues and finally get an idea about the usage.</p>
-<h2 id="workshop-agenda">Workshop Agenda</h2>
-<ul>
-<li>Deploy the Elastic environment from AWS Marketplace</li>
-<li>Familiarize yourself with the environment in AWS and in Elastic</li>
-<li>Identify root causes for application specific issues within the application</li>
-<li>Apply Machine Learning to the data in order to identify hidden patterns</li>
-</ul>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Learn how to start quick and easy with the Elastic Stack in AWS</li>
-<li>Learn how to solve challenging issues within applications running on AWS</li>
-<li>Learn how to incorporate Machine Learning capabilities for your analysis (AIOps)</li>
-</ul>
-<h2 id="who-should-attend">Who should attend</h2>
-<p>This workshop is targeted towards roles in the following areas:</p>
-<p><em>Application Development:</em> Develop software, apps and services, and are responsible for creating observable code, and helping debug and fix code-level issues in dev &amp; prod.</p>
-<p><em>DevOps / SRE / Operations / Application Support:</em> Responsible for maintaining service availability, performance, and reliability SLAs, and resolving issues when they occur</p>
-<h2 id="background-knowledge-for-the-workshop">Background knowledge for the Workshop</h2>
-<p>We start from scratch. So no prior knowledge needed to complete the workshop. However having some kind of Elastic knowledge helps to get it done more efficiently and learn some tips and tricks at the same time.</p>
-<h2 id="expected-time">Expected time</h2>
-<p>We’ve planned this workshop to be finished within 1-2 hours. You can pause at any time and continue working. However, the trial period for your Elastic Cluster within the AWS Marketplace is 7 days. After that period, your trial will automatically transform into a paid subscription if you do not delete the environment.</p>
+	<h2 id="task-4">Task 4</h2>
+<p>In the third task you have to find the reason for some strange data within the last month.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Hint | Only use this if you have no idea how to proceed.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Within the Machine Learning menu in Kibana you can find &ldquo;Explain Log Spike&rdquo;. Use this with the Python Logs saved search.</p>
+
+    </div>
+</div>
 
 
 
@@ -734,41 +726,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -793,86 +752,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -938,6 +817,118 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -994,6 +985,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1009,6 +1001,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1030,10 +1025,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Elastic on AWS Workshop"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/05_task3.html" title="AIOps Log Spike analysis"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/00_introduction/page-1-elastic.html" title="What is Elastic?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/08_conclusion.html" title="Conclusion" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -1,6 +1,6 @@
 ---
 title: "AIOps Log Spike analysis"
-weight: 34
+weight: 60
 ---
 ## Task 3
 
@@ -9,6 +9,12 @@ In the third task you have to find the reason for some anomalous log spikes. Eve
 {{%expand "Hint | Only use this if you have no idea how to proceed." %}}
 
 Within the Machine Learning menu in Kibana you can find "Explain Log Spike". Use this with the Python Logs saved search.
+
+{{% /expand%}}
+
+{{%expand "Solution | Open here if you think you found the issue and want to check your result." %}}
+
+
 
 {{% /expand%}}
 

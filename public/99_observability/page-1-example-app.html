@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Introduction :: Elastic Observability on AWS Workshop</title>
+    <title>Observe apps running in AWS :: Elastic Observability on AWS Workshop</title>
 
     
     <link href="/css/nucleus.css?1675792333" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/00_introduction.html">
+  <body class="" data-url="/99_observability/page-1-example-app.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/00_introduction.html" title="Introduction" class="dd-item
         
-        active
+        
         
         ">
       <a href="/00_introduction.html">
@@ -327,7 +327,7 @@
   
     
     <li data-nav-id="/99_observability.html" title="Observability" class="dd-item
-        
+        parent
         
         
         ">
@@ -376,7 +376,7 @@
  
   
     
-      <li data-nav-id="/99_observability/page-1-example-app.html" title="Observe apps running in AWS" class="dd-item ">
+      <li data-nav-id="/99_observability/page-1-example-app.html" title="Observe apps running in AWS" class="dd-item active">
         <a href="/99_observability/page-1-example-app.html">
         Observe apps running in AWS
         <i class="fas fa-check read-icon"></i>
@@ -629,7 +629,13 @@
             
           
           
-            <a href='/'>Elastic on AWS Workshop</a> > Introduction
+            
+            
+          
+          
+            <a href='/'>Elastic on AWS Workshop</a> > <a href='/99_observability.html'>Observability</a> > Observe apps running in AWS
+          
+        
           
         
           
@@ -642,11 +648,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#workshop-agenda">Workshop Agenda</a></li>
-    <li><a href="#learning-objectives">Learning Objectives</a></li>
-    <li><a href="#who-should-attend">Who should attend</a></li>
-    <li><a href="#background-knowledge-for-the-workshop">Background knowledge for the Workshop</a></li>
-    <li><a href="#expected-time">Expected time</a></li>
+    <li>
+      <ul>
+        <li><a href="#application-logs">Application logs</a></li>
+        <li><a href="#apm-traces">APM (Traces)</a></li>
+        <li><a href="#lambda-functions">Lambda functions</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -664,42 +672,35 @@
           
             <h1>
               
-              Introduction
+              Observe apps running in AWS
             </h1>
           
 
         
 
 
-
-	<p>In this workshop you will learn how to use Elastic in your AWS environment. We will create the full environment for you including an example application. Your task will be to identify issues within this application by using Elastic, solving these issues and finally get an idea about the usage.</p>
-<h2 id="workshop-agenda">Workshop Agenda</h2>
-<ul>
-<li>Deploy the Elastic environment from AWS Marketplace</li>
-<li>Familiarize yourself with the environment in AWS and in Elastic</li>
-<li>Identify root causes for application specific issues within the application</li>
-<li>Apply Machine Learning to the data in order to identify hidden patterns</li>
-</ul>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Learn how to start quick and easy with the Elastic Stack in AWS</li>
-<li>Learn how to solve challenging issues within applications running on AWS</li>
-<li>Learn how to incorporate Machine Learning capabilities for your analysis (AIOps)</li>
-</ul>
-<h2 id="who-should-attend">Who should attend</h2>
-<p>This workshop is targeted towards roles in the following areas:</p>
-<p><em>Application Development:</em> Develop software, apps and services, and are responsible for creating observable code, and helping debug and fix code-level issues in dev &amp; prod.</p>
-<p><em>DevOps / SRE / Operations / Application Support:</em> Responsible for maintaining service availability, performance, and reliability SLAs, and resolving issues when they occur</p>
-<h2 id="background-knowledge-for-the-workshop">Background knowledge for the Workshop</h2>
-<p>We start from scratch. So no prior knowledge needed to complete the workshop. However having some kind of Elastic knowledge helps to get it done more efficiently and learn some tips and tricks at the same time.</p>
-<h2 id="expected-time">Expected time</h2>
-<p>We’ve planned this workshop to be finished within 1-2 hours. You can pause at any time and continue working. However, the trial period for your Elastic Cluster within the AWS Marketplace is 7 days. After that period, your trial will automatically transform into a paid subscription if you do not delete the environment.</p>
+<p>While apps running in AWS use many of the available AWS services they all have their custom code as well. Consequently observing the AWS services and platform is only one part of the story. The other necessary part to get full visibility is to have the ability to look deep into what&rsquo;s happening in your application as well by observing your individual logs, metrics and application traces.</p>
+<h3 id="application-logs">Application logs</h3>
+<p>In order to get your individual logs to Elastic you need to consider two things. First how to get the logs of all parts of the application in. If your application is using container or kubernetes technology this is quite simple.</p>
+<p>If your application is running on EC2 instances you might need to collect custom log sources.</p>
+<p>Independently of the log collection your also need to consider the log parsing. Per default custom logs will be collected as is. But most often the interesting information are within the log line itself. Therefore it can be helpful to parse the relevant information within the log lines and store them in separate fields. This makes it really handy to create visualizations and filters based on these extracted values.</p>
+<p>If you are not sure whether you need something to parse out or not the best option is use a runtime field. A runtime field can be generated after the data is loaded and will extract the necessary information from any document that exists. However this comes with some performance drawbacks.
+If you know which kind of information you would like to extract the better option is to use pre index parsing using ingest node pipelines. Within an ingest node pipeline you can configure so-called processors to extract and fine tune the parsing before the data gets indexed to Elastic. The big advantage is that this will happen only once per document. In comparison to the runtime fields where the extraction happens on every query for every affected document.</p>
+<p>Having a look into the integrations page within Elastic there are multiple possibilities to get your custom logs in.
+<img src="/images/integration-page-2.png" alt="Elastic integration page">
+Elastic offers Serverless log forwarding using Lambda functions, as well as Log collection from S3, CloudWatch and directly from the EC2 machine. In addition to that you also could use the diverse language clients to directly send the logs to Elastic from your application.</p>
+<p>After you added the integration based on your need you can change the parsing like described above using the Ingest Pipelines (Under Stack Management).</p>
+<h3 id="apm-traces">APM (Traces)</h3>
+<p>The collection and analysis of Application transactions and traces help you to get a deep understanding of what is happening within your application and how the different parts communicate to each other.</p>
+<p>Using distributed tracing you also can have a look into the service map that will be created automatically based on the data and the service map also incorporates Elastic Machine Learning results.
+<img src="/images/service-map.png" alt="Elastic service map"></p>
+<h3 id="lambda-functions">Lambda functions</h3>
+<p>Many of the modern application within the AWS ecosystem also using Lambda function. With Elastic APM its also possible to collect the traces from the Lamdba functions in additions to the CloudWatch metrics that you can collect.
+The following pictures illustrates how Elastic APM integrates into your Lambda processes.
+<img src="/images/lambda-to-elastic.png" alt="Lambda to Elastic"></p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -734,41 +735,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -793,86 +761,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -926,6 +814,122 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1030,10 +1034,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Elastic on AWS Workshop"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/99_observability/page-1-platform.html" title="Observe the AWS platform"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/00_introduction/page-1-elastic.html" title="What is Elastic?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/99_observability/page-1-k8s.html" title="Observe apps running in Kubernetes (EKS)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1065,3 +1069,4 @@
 
   </body>
 </html>
+

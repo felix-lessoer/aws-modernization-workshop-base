@@ -1,6 +1,6 @@
 ---
 title: "Anomaly Detection"
-weight: 35
+weight: 70
 ---
 ## Task 4
 

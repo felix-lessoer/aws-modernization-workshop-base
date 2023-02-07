@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Introduction :: Elastic Observability on AWS Workshop</title>
+    <title>Run the Cloud Formation script :: Elastic Observability on AWS Workshop</title>
 
     
     <link href="/css/nucleus.css?1675792333" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/00_introduction.html">
+  <body class="" data-url="/01_getting-started/page-1-cloud-formation.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/00_introduction.html" title="Introduction" class="dd-item
         
-        active
+        
         
         ">
       <a href="/00_introduction.html">
@@ -145,7 +145,7 @@
   
     
     <li data-nav-id="/01_getting-started.html" title="Getting started" class="dd-item
-        
+        parent
         
         
         ">
@@ -215,7 +215,7 @@
  
   
     
-      <li data-nav-id="/01_getting-started/page-1-cloud-formation.html" title="Run the Cloud Formation script" class="dd-item ">
+      <li data-nav-id="/01_getting-started/page-1-cloud-formation.html" title="Run the Cloud Formation script" class="dd-item active">
         <a href="/01_getting-started/page-1-cloud-formation.html">
         Run the Cloud Formation script
         <i class="fas fa-check read-icon"></i>
@@ -629,7 +629,13 @@
             
           
           
-            <a href='/'>Elastic on AWS Workshop</a> > Introduction
+            
+            
+          
+          
+            <a href='/'>Elastic on AWS Workshop</a> > <a href='/01_getting-started.html'>Getting started</a> > Run the Cloud Formation script
+          
+        
           
         
           
@@ -640,15 +646,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#workshop-agenda">Workshop Agenda</a></li>
-    <li><a href="#learning-objectives">Learning Objectives</a></li>
-    <li><a href="#who-should-attend">Who should attend</a></li>
-    <li><a href="#background-knowledge-for-the-workshop">Background knowledge for the Workshop</a></li>
-    <li><a href="#expected-time">Expected time</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -664,42 +662,36 @@
           
             <h1>
               
-              Introduction
+              Run the Cloud Formation script
             </h1>
           
 
         
 
 
+<p>Now we have everything in place in order to create your environment using Cloud Formation. 
+Just click on the following button and enter the API key that you have created within your Elastic Cloud via AWS Marketplace environment (step 4)</p>
 
-	<p>In this workshop you will learn how to use Elastic in your AWS environment. We will create the full environment for you including an example application. Your task will be to identify issues within this application by using Elastic, solving these issues and finally get an idea about the usage.</p>
-<h2 id="workshop-agenda">Workshop Agenda</h2>
-<ul>
-<li>Deploy the Elastic environment from AWS Marketplace</li>
-<li>Familiarize yourself with the environment in AWS and in Elastic</li>
-<li>Identify root causes for application specific issues within the application</li>
-<li>Apply Machine Learning to the data in order to identify hidden patterns</li>
-</ul>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Learn how to start quick and easy with the Elastic Stack in AWS</li>
-<li>Learn how to solve challenging issues within applications running on AWS</li>
-<li>Learn how to incorporate Machine Learning capabilities for your analysis (AIOps)</li>
-</ul>
-<h2 id="who-should-attend">Who should attend</h2>
-<p>This workshop is targeted towards roles in the following areas:</p>
-<p><em>Application Development:</em> Develop software, apps and services, and are responsible for creating observable code, and helping debug and fix code-level issues in dev &amp; prod.</p>
-<p><em>DevOps / SRE / Operations / Application Support:</em> Responsible for maintaining service availability, performance, and reliability SLAs, and resolving issues when they occur</p>
-<h2 id="background-knowledge-for-the-workshop">Background knowledge for the Workshop</h2>
-<p>We start from scratch. So no prior knowledge needed to complete the workshop. However having some kind of Elastic knowledge helps to get it done more efficiently and learn some tips and tricks at the same time.</p>
-<h2 id="expected-time">Expected time</h2>
-<p>We’ve planned this workshop to be finished within 1-2 hours. You can pause at any time and continue working. However, the trial period for your Elastic Cluster within the AWS Marketplace is 7 days. After that period, your trial will automatically transform into a paid subscription if you do not delete the environment.</p>
+<a  href="https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?templateURL=https://s3.eu-central-1.amazonaws.com/cf-templates-1co02imbb4wen-eu-central-1/2023-02-06T123446.553Zbvm-cloudformation.yaml&amp;stackName=myElasticWorkshopEnvironment" target="_blank"  class="btn btn-default">
+  
+  
+  
+    
+  <i class="fas fa-wrench"></i>
+    
+  
+  Create your environment
+  
+</a>
+
+<p>Add your Elastic API Key to the template:
+<img src="/images/CloudFormation-Stack.png" alt="Enter Elastic API Key"></p>
+<p>Acknowledge the creation of resources:
+<img src="/images/acknowledge.png" alt="acknowledge"></p>
+<p>And finally click on create stack. Afterwards we will create the environment for you. This can take some time.</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -734,41 +726,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -793,6 +752,22 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -826,6 +801,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -833,6 +825,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1030,10 +1025,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Elastic on AWS Workshop"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/01_getting-started/page-1-elastic-key.html" title="Get credentials from Elastic"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/00_introduction/page-1-elastic.html" title="What is Elastic?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/02_demo.html" title="Root Cause Analysis" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1065,3 +1060,4 @@
 
   </body>
 </html>
+

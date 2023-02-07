@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Introduction :: Elastic Observability on AWS Workshop</title>
+    <title>Analyze performance issues :: Elastic Observability on AWS Workshop</title>
 
     
     <link href="/css/nucleus.css?1675792333" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/00_introduction.html">
+  <body class="" data-url="/04_task2.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -89,7 +89,7 @@
     
     <li data-nav-id="/00_introduction.html" title="Introduction" class="dd-item
         
-        active
+        
         
         ">
       <a href="/00_introduction.html">
@@ -448,7 +448,7 @@
     
     <li data-nav-id="/04_task2.html" title="Analyze performance issues" class="dd-item
         
-        
+        active
         
         ">
       <a href="/04_task2.html">
@@ -629,7 +629,7 @@
             
           
           
-            <a href='/'>Elastic on AWS Workshop</a> > Introduction
+            <a href='/'>Elastic on AWS Workshop</a> > Analyze performance issues
           
         
           
@@ -642,11 +642,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#workshop-agenda">Workshop Agenda</a></li>
-    <li><a href="#learning-objectives">Learning Objectives</a></li>
-    <li><a href="#who-should-attend">Who should attend</a></li>
-    <li><a href="#background-knowledge-for-the-workshop">Background knowledge for the Workshop</a></li>
-    <li><a href="#expected-time">Expected time</a></li>
+    <li><a href="#task-2">Task 2</a></li>
   </ul>
 </nav>
     </div>
@@ -664,7 +660,7 @@
           
             <h1>
               
-              Introduction
+              Analyze performance issues
             </h1>
           
 
@@ -672,28 +668,27 @@
 
 
 
-	<p>In this workshop you will learn how to use Elastic in your AWS environment. We will create the full environment for you including an example application. Your task will be to identify issues within this application by using Elastic, solving these issues and finally get an idea about the usage.</p>
-<h2 id="workshop-agenda">Workshop Agenda</h2>
-<ul>
-<li>Deploy the Elastic environment from AWS Marketplace</li>
-<li>Familiarize yourself with the environment in AWS and in Elastic</li>
-<li>Identify root causes for application specific issues within the application</li>
-<li>Apply Machine Learning to the data in order to identify hidden patterns</li>
-</ul>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Learn how to start quick and easy with the Elastic Stack in AWS</li>
-<li>Learn how to solve challenging issues within applications running on AWS</li>
-<li>Learn how to incorporate Machine Learning capabilities for your analysis (AIOps)</li>
-</ul>
-<h2 id="who-should-attend">Who should attend</h2>
-<p>This workshop is targeted towards roles in the following areas:</p>
-<p><em>Application Development:</em> Develop software, apps and services, and are responsible for creating observable code, and helping debug and fix code-level issues in dev &amp; prod.</p>
-<p><em>DevOps / SRE / Operations / Application Support:</em> Responsible for maintaining service availability, performance, and reliability SLAs, and resolving issues when they occur</p>
-<h2 id="background-knowledge-for-the-workshop">Background knowledge for the Workshop</h2>
-<p>We start from scratch. So no prior knowledge needed to complete the workshop. However having some kind of Elastic knowledge helps to get it done more efficiently and learn some tips and tricks at the same time.</p>
-<h2 id="expected-time">Expected time</h2>
-<p>We’ve planned this workshop to be finished within 1-2 hours. You can pause at any time and continue working. However, the trial period for your Elastic Cluster within the AWS Marketplace is 7 days. After that period, your trial will automatically transform into a paid subscription if you do not delete the environment.</p>
+	<h2 id="task-2">Task 2</h2>
+<p>In the second task you have to find the reason for some bad performing transactions. The performance issue becomes visible after the first task is fixed. So it may take a bit of time until you can clearly see it in the charts. It&rsquo;s also okay to reduce the time window of the Kibana charts to only get and see the data after the fix of task 1.</p>
+<p>You know that you’ve fixed the issue when there is no transaction that takes longer than a couple of milliseconds.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Hint | Only use this if you have no idea how to proceed.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>In order to find the issue you need to navigate to the APM Service of the Python App.
+The Python App only has one trace to analyze. Navigate into that trace and perform the Latency correlation. Make sure that you include enough data. The best would be to have 15 min of data after you fixed the issue in task 1. However if you are quicker you can use the time picker in Kibana to only use more recent data.</p>
+<p>When there is enough data you will find the concrete next step to do in order to fix the performance issue.</p>
+
+    </div>
+</div>
 
 
 
@@ -734,41 +729,8 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -793,86 +755,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -938,6 +820,22 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -977,6 +875,106 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1030,10 +1028,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Elastic on AWS Workshop"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/99_observability/page-1-conpliance.html" title="Observe vulnerabilities and compliance"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/00_introduction/page-1-elastic.html" title="What is Elastic?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/05_task3.html" title="AIOps Log Spike analysis" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

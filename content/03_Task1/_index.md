@@ -1,6 +1,6 @@
 ---
 title: "Find issues in applications running on AWS"
-weight: 32
+weight: 40
 ---
 ## Task 1
 
