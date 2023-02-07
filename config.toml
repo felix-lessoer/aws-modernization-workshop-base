@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en" # Modify to change the default language/version of the site
 
-title = "Elastic on AWS Workshop"
+title = "Elastic Observability on AWS Workshop"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "false"
@@ -17,7 +17,7 @@ enableEmoji = true
   # Author of the site, will be used in meta information
   author = "Felix Roessel"
   # Description of the site, will be used in meta information
-  description = "Elastic on AWS Workshop description"
+  description = "Elastic Observability on AWS Workshop"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
   # Disable search function. It will hide search bar
@@ -50,26 +50,22 @@ url = "https://awsworkshop.io"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> AWS Builders Library"
-url = "https://aws.amazon.com/builders-library/"
-weight = 11
-
-[[menu.shortcuts]]
 name = "<i class='far fa-lightbulb'></i> Modernization with AWS"
 url = "https://aws.amazon.com/blogs/modernizing-with-aws/"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> EKS Workshop"
-url = "https://eksworkshop.com/"
+name = "<i class='fas fa-chalkboard-teacher'></i> Elasticsearch on AWS Marketplace"
+url = "https://ela.st/"
 weight = 21
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> ECS Workshop"
-url = "https://ecsworkshop.com/"
+name = "<i class='fas fa-chalkboard-teacher'></i> Elastic Cloud"
+url = "https://cloud.elastic.co"
 weight = 22
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> App Mesh Workshop"
-url = "https://www.appmeshworkshop.com/"
+name = "<i class='fas fa-chalkboard-teacher'></i> Elasticsearch or OpenSearch?"
+url = "https://www.elastic.co/amazon-opensearch-service"
 weight = 23
+
